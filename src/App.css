@@ -1,0 +1,41 @@
+
+.hello{
+ font-family: 'Luckiest Guy', cursive;
+}
+
+ul li{
+    font-family: 'Arial', cursive;
+}
+
+
+.hi{
+ font-family: 'Love Ya Like A Sister',cursive;
+}
+
+.tes{
+  font-family: 'Arial',cursive;
+}
+
+.pa{
+  font-family: 'Times new roman',cursive;
+}
+
+
+
+
+.Akademik{
+
+  font-family: 'Monda', sans-serif;
+  line-height: 1.3; /* Samakan dengan Figma */
+  letter-spacing: 0.5px; /* Samakan dengan Figma */
+
+
+}
+
+.Prg{
+  font-family: 'Times new roman',cursive;
+}
+
+body{
+  background-color: rgb(8, 8, 107);
+}
