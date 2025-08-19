@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import Head from './components/Head';
 import About from './components/About';
 import Footer from './components/Footer';
@@ -7,9 +7,7 @@ import Layer2 from './components/Layer2';
 import Juara from './components/Juara';
 import Register from './components/Registrasi';
 import Informatika from "./components/Informatika";
-import { Info } from "lucide-react";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -23,37 +21,31 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <BrowserRouter>
-    <ScrollToTop/>  
+    <HashRouter>
+      <ScrollToTop />
       <Routes>
-        {/* Halaman Utama */}
-        <Route path="/" element={
-          <>
-            <Head />
-            <Layer2 />
-            <About />
-            <Welcome />
-            <Juara />
-            <Footer />
-          </>
-        } />
+      
+        <Route
+          path="/"
+          element={
+            <>
+              <Head />
+              <Layer2 />
+              <About />
+              <Welcome />
+              <Juara />
+              <Footer />
+            </>
+          }
+        />
 
-        {/* Halaman Register */}
-        <Route path="/register" element={
-          <>
-           
-            <Register />
-            
-          </>
-        } />
-        <Route path="/informatika" element={
-          <>
-          <Informatika/>
-        </>
-      }>
-        </Route>
+       
+        <Route path="/register" element={<Register />} />
+
+        
+        <Route path="/informatika" element={<Informatika />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
